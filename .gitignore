@@ -1,0 +1,9 @@
+env
+.env
+.venv
+venv
+vscode
+.vscode
+/env
+/venv
+/vscode
