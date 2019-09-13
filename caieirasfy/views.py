@@ -29,3 +29,23 @@ class MusicaList(views.APIView):
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return  Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class MusicaDetail(views.APIView):
+
+    def get_objects(self, id):
+        try:
+            return Musica.objects.get(id=id)
+        except:
+            raise Http404
+
+    def get(self, request, id):
+        musica = self.get_objects(id)
+        serializer = MusicaSerializer(musica)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, id):
+        musica = self.get_objects(id)
+        serializer = MusicaSerializer(musica, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
