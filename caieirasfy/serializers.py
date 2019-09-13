@@ -4,19 +4,11 @@ from caieirasfy.models import Musica
 
 
 class MusicaSerializer(serializers.Serializer):
-    nome = serializers.CharField(
-        max_length=50,
-    )
+    id = serializers.IntegerField(read_only=True)
+    nome = serializers.CharField(max_length=50)
     tempo = serializers.IntegerField()
-
-    Artista =serializers.CharField(
-        max_length=50,
-
-    )
-
-    genero_musical = serializers.CharField(
-        max_length=255,
-    )
+    Artista =serializers.CharField(max_length=50)
+    genero_musical = serializers.CharField(max_length=255)
 
     def create(self, validated_data):
         musica =  Musica.objects.create(**validated_data)

@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 
 # Create your views here.
@@ -10,13 +11,13 @@ from rest_framework.response import Response
 from caieirasfy.models import Musica
 from caieirasfy.serializers import MusicaSerializer
 
-class MusicalViewsSets(viewsets.ModelViewSet):
+class MusicaViewsSets(viewsets.ModelViewSet):
     filter_backends = [SearchFilter]
     serializer_class = ['^nome','genero_musical']
     queryset = Musica.objects.all()
     serializer_class = MusicaSerializer
 
-class MusicalList(views.APIView):
+class MusicaList(views.APIView):
     def get(self, request):
         musica = Musica.object.all()
         serializer = MusicaSerializer(musica,many=True)
@@ -27,5 +28,4 @@ class MusicalList(views.APIView):
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return  Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
