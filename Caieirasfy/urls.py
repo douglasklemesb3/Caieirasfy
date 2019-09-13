@@ -18,13 +18,10 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
-from caieirasfy.views import MusicaViewSet
 
-router = routers.DefaultRouter()
-router.register(r'musica', MusicaViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls),),
     path('login/', obtain_auth_token),
 ]

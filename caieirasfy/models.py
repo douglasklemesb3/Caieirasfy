@@ -5,7 +5,7 @@ from django.db import models
 class Musica(models.Model):
     nome = models.CharField(
         max_length=50,
-        verbose_name='Nome da musica'
+        verbose_name='Nome da musica '
     )
     Artista = models.CharField(
         max_length=50,
