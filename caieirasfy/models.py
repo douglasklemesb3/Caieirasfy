@@ -7,6 +7,7 @@ class Musica(models.Model):
         max_length=50,
         verbose_name='Nome da musica '
     )
+    tempo =  models.IntegerField()
     Artista = models.CharField(
         max_length=50,
         verbose_name='Artista',

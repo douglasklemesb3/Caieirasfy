@@ -9,7 +9,8 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
 from caieirasfy.models import Musica
-from caieirasfy.serializers import MusicaSerializer
+from caieirasfy.serializers import MusicaSerializer, MusicaLinghtSerializer
+
 
 class MusicaViewsSets(viewsets.ModelViewSet):
     filter_backends = [SearchFilter]
@@ -20,7 +21,7 @@ class MusicaViewsSets(viewsets.ModelViewSet):
 class MusicaList(views.APIView):
     def get(self, request):
         musica = Musica.object.all()
-        serializer = MusicaSerializer(musica,many=True)
+        serializer = MusicaLinghtSerializer(musica,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
     def post(self,request):
         serializer = MusicaSerializer(data=request.data)
