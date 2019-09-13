@@ -13,7 +13,7 @@ from caieirasfy.serializers import MusicaSerializer
 
 class MusicaViewsSets(viewsets.ModelViewSet):
     filter_backends = [SearchFilter]
-    serializer_class = ['^nome','genero_musical']
+    search_fields = ['^nome','^artista','^genero_musical']
     queryset = Musica.objects.all()
     serializer_class = MusicaSerializer
 

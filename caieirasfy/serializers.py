@@ -19,7 +19,10 @@ class MusicaSerializer(serializers.Serializer):
         instance.tempo =validated_data.get('tempo')
         instance.artista = validated_data.get('artista')
         instance.genero_musical = validated_data.get('genero_musical')
+        instance.save()
+        return instance
 
 class MusicaLinghtSerializer(serializers.Serializer):
     nome = serializers.CharField()
+    tempo =serializers.IntegerField()
     genero_musical =serializers.CharField()
