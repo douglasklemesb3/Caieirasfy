@@ -16,16 +16,6 @@ class MusicalViewsSets(viewsets.ModelViewSet):
     queryset = Musica.objects.all()
     serializer_class = MusicaSerializer
 
-class MusicalList(views.APIView):
-    def get(self, request):
-        musica = Musica.object.all()
-        serializer = MusicaSerializer(musica,many=True)
-        return Response(serializer.data,status=status.HTTP_200_OK)
-    def post(self,request):
-        serializer = MusicaSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-        return  Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
