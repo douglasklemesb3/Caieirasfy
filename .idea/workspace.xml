@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0ba11e9-c525-4cb3-906a-9da0c35d252a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Caieirasfy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Caieirasfy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caieirasfy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Caieirasfy/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caieirasfy/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caieirasfy/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caieirasfy/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/views.py" afterDir="false" />
