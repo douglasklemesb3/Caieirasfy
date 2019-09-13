@@ -24,7 +24,7 @@ router = routers.DefaultRouter()
 router.register(r'musica', MusicaViewsSets)
 
 urlpatterns = [
-    path('musica',MusicaList.as_view()),
+    path('musica/',MusicaList.as_view()),
     path('musica/<int:id>',MusicaDetail.as_view()),
     path('admin/',admin.site.urls),
     path('api/', include(router.urls)),
