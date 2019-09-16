@@ -4,10 +4,9 @@
     <list default="true" id="e0ba11e9-c525-4cb3-906a-9da0c35d252a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Caieirasfy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Caieirasfy/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caieirasfy/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caieirasfy/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caieirasfy/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caieirasfy/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artista/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/artista/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artista/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/artista/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artista/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/artista/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
