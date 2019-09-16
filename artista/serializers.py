@@ -4,17 +4,26 @@ from artista.models import Artista
 from caieirasfy.models import Musica
 
 
+class MusicaDTO(serializers.Serializer):
+    nome = serializers.CharField()
+    genero = serializers.CharField()
+
+
 class ArtistaDataSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     nome = serializers.CharField(read_only=True)
+
 
 class ArtistaSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     nome = serializers.CharField(max_length=255)
     idade = serializers.IntegerField()
+    musica = MusicaDTO(many=True, read_only=True)
     estilo_musical = serializers.CharField()
 
     def create(self, validated_data):
+        #musica_data = validated_data.pop('minhas musicas')
+            #musica = Musica.objects.get(id=musica_data['id'])
         artista = Artista.objects.create(**validated_data)
         return artista
 
@@ -30,4 +39,4 @@ class ArtistaSerializer(serializers.Serializer):
 
 class ArtistaLightSerializer(serializers.Serializer):
         id = serializers.IntegerField()
-        nome = serializers.CharField()
+        nome = serializers.CharField(read_only=True)
