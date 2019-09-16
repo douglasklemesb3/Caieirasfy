@@ -12,12 +12,10 @@ class ArtistaSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     nome = serializers.CharField(max_length=255)
     idade = serializers.IntegerField()
-    estilo = serializers.ArtistaDataSerializer()
+    estilo_musical = serializers.CharField()
 
     def create(self, validated_data):
-        musica_data = validated_data('musica_favorita')
-        musica = Musica.objects.get(id=musica_data['id'])
-        artista = Artista.objects.create(musica_favorita = musica, **validated_data)
+        artista = Artista.objects.create(**validated_data)
         return artista
 
     def update(self, instance, validated_data):

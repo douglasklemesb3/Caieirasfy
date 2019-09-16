@@ -9,10 +9,10 @@ from artista.models import Artista
 from artista.serializers import ArtistaLightSerializer, ArtistaSerializer
 
 
-class ArtistaList(views.APIViews):
+class ArtistaList(views.APIView):
     def get(self,request):
         artista =  Artista.objects.all()
-        serializer = ArtistaLightSerializer(artista,many= True)
+        serializer = ArtistaLightSerializer(artista, many= True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     def post(self, request):
         serializer = ArtistaSerializer(data = request.data)
